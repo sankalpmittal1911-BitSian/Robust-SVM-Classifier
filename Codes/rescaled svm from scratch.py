@@ -24,9 +24,8 @@ t_test[t_test==0]=-1
 x_train=x_train.T
 x_test=x_test.T
  
-gamma=0.5
+gamma=0.1
 lambd=0.5
-learning_rate=0.5
  
 #Random initialization of w and beta
 w=np.zeros((x_train.shape[0],1))
