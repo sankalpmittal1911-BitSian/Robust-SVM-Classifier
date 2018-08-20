@@ -76,7 +76,7 @@ for i in range(1,1000):
 	
 	G_alpha_alpha=(1/x_train.shape[1])*(1/1-np.exp(-eta))*eta*(1-t_train*np.dot(w.T,x_train))*np.exp(-eta*alpha.T*(1-t_train*np.dot(w.T,x_train)))
 	G_alpha_beta=(1/x_train.shape[1])*(1/1-np.exp(-eta))*eta*(1-t_train*np.dot(w.T,x_train))*np.exp(-eta*beta.T*(1-t_train*np.dot(w.T,x_train)))
-	G_w_alpha=(1/x_train.shape[1])*(1/(1-math.exp(eta)))*eta*t_train*np.exp(-eta*alpha.T*(1-t_train*np.dot(w.T,x_train)))
+	G_w_alpha=(1/x_train.shape[1])*(1/(1-math.exp(-eta)))*eta*t_train*np.exp(-eta*alpha.T*(1-t_train*np.dot(w.T,x_train)))
 	temp1=alpha.T*x_train
 	temp1=temp1.T
 	G_w_alpha=np.dot(G_w_alpha,temp1).T
